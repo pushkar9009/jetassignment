@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+
+    <TextView
+        android:id="@+id/tv_artcile_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12Aug 2020"
+        android:textColor="@android:color/black"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_user_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_artcile_date"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/iv_user_avatar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:clickable="true"
+            android:elevation="5dp"
+            android:padding="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/vector_avatar"
+            app:civ_border_color="@android:color/black"
+            app:civ_border_width="2dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/iv_user_avatar"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+
+            >
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mr. Pushkaraj Bedre"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/tv_user_designation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Specialization"
+                android:textSize="14dp"
+                android:layout_marginTop="5dp"
+                />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_article_image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/rl_user_layout"
+        />
+
+    <TextView
+        android:id="@+id/tv_article_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:singleLine="false"
+        android:layout_below="@+id/iv_article_image"
+        />
+
+    <TextView
+        android:id="@+id/tv_article_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:singleLine="false"
+        android:layout_below="@+id/tv_article_content"
+        />
+
+    <TextView
+        android:id="@+id/tv_article_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_article_title"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_comnts_likes"
+        android:layout_below="@+id/tv_article_url"
+        android:layout_marginTop="15dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_article_likes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:text="xyz"
+            android:layout_gravity="left"
+            />
+
+        <TextView
+            android:id="@+id/tv_article_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:text="abc"
+            android:gravity="right"
+            />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/rl_comnts_likes"
+        android:background="#70000000"/>
+
+
+</RelativeLayout>
