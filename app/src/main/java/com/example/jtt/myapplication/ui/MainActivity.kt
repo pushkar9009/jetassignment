@@ -31,12 +31,23 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        datasource?.isLoading?.observe(this, Observer {
+/*        datasource?.isLoading?.observe(this, Observer {
             if (it!!) progressBar1?.visibility = View.VISIBLE else progressBar1?.visibility = View.GONE
+        })*/
+
+        itemViewModel.getisLoading()?.observe(this, Observer {
+            showHideProgress(it)
         })
 
         recycler_view.adapter = adapter
 
+    }
 
+    fun showHideProgress(state:Boolean){
+        if(state){
+            progressBar1?.visibility = View.VISIBLE
+        }else{
+            progressBar1?.visibility = View.GONE
+        }
     }
 }

@@ -115,7 +115,7 @@ class UserDataSource : PageKeyedDataSource<Int, ArticleResponse>() {
 
     }
 
-    fun getNetworkState(): MutableLiveData<*> {
+    fun getisLoading(): MutableLiveData<Boolean> {
         return isLoading
     }
 
